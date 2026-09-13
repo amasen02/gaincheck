@@ -1,6 +1,6 @@
-﻿# Contributing to GainCheck
+# Contributing to GainCheck
 
-Thanks for helping improve a small, local evidence tool. Runtime code is Python 3.11+ standard library code. Please keep changes deterministic, offline by default, and within the evidence contract in `GAINCHECK-PLAN.md`.
+Thanks for helping improve a small, local evidence tool. Runtime code is Python 3.11+ standard library code. Please keep changes deterministic, offline by default, and within the documented [CLI contract](docs/cli.md) and [report schema](docs/schema.md).
 
 ## Local checks
 
