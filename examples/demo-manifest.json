@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {"id":"valid-compression","baseline":"fixtures/caller-output.txt","candidate":"fixtures/candidate-output.txt"},
+    {"id":"marker-lost","baseline":"fixtures/error-baseline.txt","candidate":"fixtures/error-lost.txt","require":["FAIL E42"]},
+    {"id":"marker-kept","baseline":"fixtures/error-baseline.txt","candidate":"fixtures/error-compact.txt","require":["FAIL E42"]},
+    {"id":"marker-only","baseline":"fixtures/payload-baseline.txt","candidate":"fixtures/payload-candidate.txt","require":["ERROR E42"]},
+    {"id":"empty","baseline":"fixtures/empty.txt","candidate":"fixtures/empty.txt"},
+    {"id":"unicode-crlf","baseline":"fixtures/unicode.txt","candidate":"fixtures/crlf.txt"}
+  ]
+}

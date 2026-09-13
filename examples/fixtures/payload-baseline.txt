@@ -1,0 +1,2 @@
+ERROR E42: payment validation failed
+customer=synthetic amount=-1

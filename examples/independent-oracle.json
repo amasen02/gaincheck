@@ -1,0 +1,135 @@
+{
+  "kind": "independent_manual_oracle_not_gaincheck_output",
+  "file_evidence": {
+    "source.log": {
+      "bytes": 768894,
+      "lines": 10000,
+      "sha256": "f5aac90ccf31711c43f36de6e7fecee4c71430b2e83853363e5c5409a48f74ba"
+    },
+    "caller-output.txt": {
+      "bytes": 1491,
+      "lines": 20,
+      "sha256": "224946e7c8e9a56b7129f0d1c32ac6e443a2962b28f0ffe69006274fc70f2ee1"
+    },
+    "candidate-output.txt": {
+      "bytes": 758,
+      "lines": 11,
+      "sha256": "4d05c4ec01b4a44ed2717f0ac14868f0de6eeb1318decb84b1e8f3a46fe2ce74"
+    },
+    "payload-baseline.txt": {
+      "bytes": 66,
+      "lines": 2,
+      "sha256": "2b9ca8a1765cbe971d6b2e1759db7ccbbc5fb9f04891dbd1af1ede6c4866c9cb"
+    },
+    "payload-candidate.txt": {
+      "bytes": 10,
+      "lines": 1,
+      "sha256": "9c72aecb8d438eaa0fc420d4186ae911cc1aea83ce3830d3c959e92caf3509a7"
+    }
+  },
+  "rtk": {
+    "row_count": 2,
+    "input_sum": 192243,
+    "output_sum": 208,
+    "reported_delta_sum": 192035,
+    "attribution": "unknown"
+  },
+  "semantic_equivalence": "unknown",
+  "declared_marker_20th_line": {
+    "baseline_contains": true,
+    "candidate_contains": false,
+    "expected_exit": 1
+  },
+  "marker_only": {
+    "baseline_bytes": 66,
+    "candidate_bytes": 10,
+    "marker": "ERROR E42",
+    "marker_survives": true,
+    "semantic_equivalence": "unknown",
+    "note": "Marker preservation does not prove payload preservation; exactfilebytesbelowoverridehandcounts."
+  },
+  "additional_files": {
+    "empty.txt": {
+      "bytes": 0,
+      "logical_lines": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "unterminated.txt": {
+      "bytes": 8,
+      "logical_lines": 1,
+      "sha256": "d9e83a19744a1a2a0408d877dbda4265b1a356913361f4403b5647df33e59d04"
+    },
+    "crlf.txt": {
+      "bytes": 10,
+      "logical_lines": 2,
+      "sha256": "6f4792b265fe72790b344fd3ef5294701d9d087bed9fce815c0f4bbad6d2ed87"
+    },
+    "unicode.txt": {
+      "bytes": 9,
+      "logical_lines": 1,
+      "sha256": "8ff9a4acf721385cfdafed6bdec07b32216a54d2277c58a61ee99a1bfe34e3b2"
+    },
+    "unchanged.txt": {
+      "bytes": 13,
+      "logical_lines": 1,
+      "sha256": "79815a0c3b204b02ab2190caeb5480965da7da52a693f340afe591b0e51fb9dc"
+    },
+    "expanded.txt": {
+      "bytes": 27,
+      "logical_lines": 2,
+      "sha256": "7408812d5c28057e70e3922943db51da4a615d7ffac6ed51b8af17c713a784a7"
+    },
+    "error-baseline.txt": {
+      "bytes": 16,
+      "logical_lines": 2,
+      "sha256": "4d9ef2615cff77ce532bfb0c333650a480490f3dc7ed3f805ee8268e50e23749"
+    },
+    "error-compact.txt": {
+      "bytes": 9,
+      "logical_lines": 1,
+      "sha256": "6c4397f88f7b2f03b4d43408a17983512fc2d246516816eb70d72752a388cd61"
+    },
+    "error-lost.txt": {
+      "bytes": 7,
+      "logical_lines": 1,
+      "sha256": "492896263fab5c45a627357b013fa6e97585c0d3b0dd38cc87eb9f6b6337a297"
+    }
+  },
+  "expected_cases": [
+    {
+      "id": "empty",
+      "baseline": "empty.txt",
+      "candidate": "empty.txt",
+      "expected_bytes_removed": 0,
+      "expected_pct": null,
+      "expected_exit": 0
+    },
+    {
+      "id": "expansion",
+      "baseline": "unchanged.txt",
+      "candidate": "expanded.txt",
+      "expected_bytes_removed": -14,
+      "expected_exit": 0
+    },
+    {
+      "id": "error-kept",
+      "baseline": "error-baseline.txt",
+      "candidate": "error-compact.txt",
+      "require": [
+        "FAIL E42"
+      ],
+      "expected_bytes_removed": 7,
+      "expected_exit": 0
+    },
+    {
+      "id": "error-lost",
+      "baseline": "error-baseline.txt",
+      "candidate": "error-lost.txt",
+      "require": [
+        "FAIL E42"
+      ],
+      "expected_bytes_removed": 9,
+      "expected_exit": 1
+    }
+  ]
+}

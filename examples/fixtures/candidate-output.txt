@@ -1,0 +1,11 @@
+2026-09-13 INFO service=example request completed status=200 latency_ms=1
+2026-09-13 INFO service=example request completed status=200 latency_ms=2
+2026-09-13 INFO service=example request completed status=200 latency_ms=3
+2026-09-13 INFO service=example request completed status=200 latency_ms=4
+2026-09-13 INFO service=example request completed status=200 latency_ms=5
+2026-09-13 INFO service=example request completed status=200 latency_ms=6
+2026-09-13 INFO service=example request completed status=200 latency_ms=7
+2026-09-13 INFO service=example request completed status=200 latency_ms=8
+2026-09-13 INFO service=example request completed status=200 latency_ms=9
+2026-09-13 INFO service=example request completed status=200 latency_ms=10
+[9990 more lines]
