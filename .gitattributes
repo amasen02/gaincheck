@@ -6,4 +6,5 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.txt text eol=lf
+examples/fixtures/crlf.txt binary
 *.db binary
