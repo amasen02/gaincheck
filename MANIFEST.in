@@ -1,0 +1,19 @@
+include LICENSE
+include README.md
+include CONTRIBUTING.md
+include SECURITY.md
+include CHANGELOG.md
+include .gitattributes
+include pyproject.toml
+recursive-include gaincheck *.py
+recursive-include tests *.py
+recursive-include examples *.json *.txt *.log *.db
+recursive-include docs *.md
+recursive-include scripts *.py
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude .DS_Store
+prune .git
+prune build
+prune dist
+prune gaincheck.egg-info
