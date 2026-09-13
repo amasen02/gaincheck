@@ -54,7 +54,7 @@ jobs:
       - name: Build and fresh-install wheel
         run: |
           python -m build --wheel --sdist --outdir dist/ci
-          python scripts/ci_smoke.py --wheel-dir dist/ci
+          python scripts/ci_smoke.py --wheel-dir dist/ci --sdist-dir dist/ci
 
   release-artifacts:
     name: build release artifacts
